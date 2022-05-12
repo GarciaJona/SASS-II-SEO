@@ -1,0 +1,14 @@
+{
+  "name": "node-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 style-sass/animation-text.scss animacion/animation-text.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

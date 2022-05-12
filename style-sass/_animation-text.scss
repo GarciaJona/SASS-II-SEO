@@ -1,0 +1,65 @@
+$color-red: #da0641;
+$color-blue:#13f1fc;
+
+@keyframes move {
+    0% {
+      text-shadow:
+        4px -4px 0 $color-red,
+        3px -3px 0 $color-red,
+        2px -2px 0 $color-red,
+        1px -1px 0 $color-red,
+        -4px 4px 0 $color-blue,
+        -3px 3px 0 $color-blue,
+        -2px 2px 0 $color-blue,
+        -1px 1px 0 $color-blue,
+      ;
+    }
+    25% {
+      text-shadow:
+        -4px -4px 0 $color-blue,
+        -3px -3px 0 $color-blue,
+        -2px -2px 0 $color-blue,
+        -1px -1px 0 $color-blue,
+        4px 4px 0 $color-red,
+        3px 3px 0 $color-red,
+        2px 2px 0 $color-red,
+        1px 1px 0 $color-red,
+      ;
+    }
+    50% {
+      text-shadow:
+        -4px 4px 0 $color-red,
+        -3px 3px 0 $color-red,
+        -2px 2px 0 $color-red,
+        -1px 1px 0 $color-red,
+        4px -4px 0 $color-blue,
+        3px -3px 0 $color-blue,
+        2px -2px 0 $color-blue,
+        1px -1px 0 $color-blue,
+      ;
+    }
+    75% {
+      text-shadow:
+        4px 4px 0 $color-blue,
+        3px 3px 0 $color-blue,
+        2px 2px 0 $color-blue,
+        1px 1px 0 $color-blue,
+        -4px -4px 0 $color-red,
+        -3px -3px 0 $color-red,
+        -2px -2px 0 $color-red,
+        -1px -1px 0 $color-red,
+      ;
+    }
+    100% {
+      text-shadow:
+        4px -4px 0 $color-red,
+        3px -3px 0 $color-red,
+        2px -2px 0 $color-red,
+        1px -1px 0 $color-red,
+        -4px 4px 0 $color-blue,
+        -3px 3px 0 $color-blue,
+        -2px 2px 0 $color-blue,
+        -1px 1px 0 $color-blue,
+      ;
+    }
+  }

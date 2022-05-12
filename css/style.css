@@ -21,7 +21,7 @@ h6 {
 
 /* Aplicamos animacion al texto con el nombre de la marca */
 
-.contenedor h1{
+.contenedor h1 {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -40,8 +40,8 @@ h6 {
     margin: auto;
 }
 
- .animated-shadow {
-    font-size: 70px; 
+.animated-shadow {
+    font-size: 70px;
     color: #ffffff;
     font-family: "poppins";
     left: 0;
@@ -51,76 +51,89 @@ h6 {
     width: 100%;
     animation: move linear 4000ms infinite;
     z-index: 2
- }
- /*Animación para rotar las sombras*/
+}
 
- @keyframes move {
-   0% {
-     text-shadow:
-       4px -4px 0 #da0641,
-       3px -3px 0 #da0641,
-       2px -2px 0 #da0641,
-       1px -1px 0 #da0641,
-       -4px 4px 0 #13f1fc,
-       -3px 3px 0 #13f1fc,
-       -2px 2px 0 #13f1fc,
-       -1px 1px 0 #13f1fc
-     ;
-   }
-   25% {
-     text-shadow:
-       -4px -4px 0 #13f1fc,
-       -3px -3px 0 #13f1fc,
-       -2px -2px 0 #13f1fc,
-       -1px -1px 0 #13f1fc,
-       4px 4px 0 #da0641,
-       3px 3px 0 #da0641,
-       2px 2px 0 #da0641,
-       1px 1px 0 #da0641
-     ;
-   }
-   50% {
-     text-shadow:
-       -4px 4px 0 #da0641,
-       -3px 3px 0 #da0641,
-       -2px 2px 0 #da0641,
-       -1px 1px 0 #da0641,
-       4px -4px 0 #13f1fc,
-       3px -3px 0 #13f1fc,
-       2px -2px 0 #13f1fc,
-       1px -1px 0 #13f1fc
-     ;
-   }
-   75% {
-     text-shadow:
-       4px 4px 0 #13f1fc,
-       3px 3px 0 #13f1fc,
-       2px 2px 0 #13f1fc,
-       1px 1px 0 #13f1fc,
-       -4px -4px 0 #da0641,
-       -3px -3px 0 #da0641,
-       -2px -2px 0 #da0641,
-       -1px -1px 0 #da0641
-     ;
-   }
-   100% {
-     text-shadow:
-       4px -4px 0 #da0641,
-       3px -3px 0 #da0641,
-       2px -2px 0 #da0641,
-       1px -1px 0 #da0641,
-       -4px 4px 0 #13f1fc,
-       -3px 3px 0 #13f1fc,
-       -2px 2px 0 #13f1fc,
-       -1px 1px 0 #13f1fc
-     ;
-   }
- }
-ul{
+
+ul {
     list-style: none;
     font-family: "poppins";
-    font-size: larger;
-    margin: 0;
+    font-size: larger; 
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link.custom-nav-link {
+    transition: 0.7s ease;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    text-shadow: 
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1260px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+.nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(133, 106, 72, 0.438);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+      left: 0;  
+    }
+}
+.navbar {
+    background-image: url(../assets/background-color.webp);
+    font-family: "Montserrat";
+
 }
 
 nav a img {
@@ -128,19 +141,6 @@ nav a img {
     margin-left: 25px;
 }
 
-ul .nav-link {
-    color: #000;
-    font-weight: bold;
-}
-
-.navbar {
-    background-image: url(../assets/background-color.webp);
-    font-family: Montserrat;
-}
-
-.a.nav-link {
-    color: black;
-}
 
 .cover {
     height: 400px;
@@ -164,9 +164,9 @@ ul .nav-link {
     -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.57);
 }
 
-.card-body{
+.card-body {
     text-align: center;
-    background: radial-gradient(circle at top left, #2770ac, #9022c39f);  
+    background: radial-gradient(circle at top left, #2770ac, #9022c39f);
     border: black 3px solid;
 }
 
@@ -331,7 +331,7 @@ textarea {
 
 /* estilo para la ubicacion */
 
-.main-ubicacion{
+.main-ubicacion {
     font-family: montserrat;
     font-weight: bold;
     text-align: center;
@@ -340,47 +340,36 @@ textarea {
     margin-bottom: 20px;
 }
 
-.google-maps{
+.google-maps {
     text-align: center;
     margin-top: 50px;
 }
 
 /* añadimos estilo para el footer */
 
-.footer-contacto{
-    margin-top: 15%;
-}
-
-.footer-ubicacion{
-    margin-top: 7.5%;
-}
-
-.footer-nosotros{
-    margin-top: 15%;
-}
-
-.footer-vehiculos{
-    margin-top: 5%;
-}
-
-footer{
-    background-color: rgba(120,120,120, .5);
-    line-height: 3;
+footer {
+    background-color: rgba(120, 120, 120, .5);
     text-align: center;
     width: 100%;
-    margin-top: 0%;
+    margin-top: 15%;
     font-family: montserrat;
     font-weight: bold;
 }
 
-footer .p{
+footer .p {
     line-height: 3;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#iconos i {
+    font-size: 26px;
+    padding: 0 8px;
+    color: #000000;
 }
 
 /* estilo para la seccion nosotros */
 
-.nosotros-bio{
+.nosotros-bio {
     justify-content: center;
     font-family: poppins;
     text-align: center;
@@ -388,6 +377,6 @@ footer .p{
     margin-top: 50px;
 }
 
-.wrapper-video{
+.wrapper-video {
     text-align: center;
 }
